@@ -110,5 +110,3 @@ async def on_reaction_remove(reaction, user):
 async def on_message(ctx):
     await OnMessage.OnMessage(ctx, client)
     await client.process_commands(ctx)
-
-client.run('NzI3NjQ2NzAzOTEzNjY0NTgy.Xvu3zQ.eK4W__kuVz_LZWvQBKM1bPlHp6A')
