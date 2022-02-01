@@ -100,11 +100,6 @@ async def generatephoto(ctx):
 
 @client.event
 async def on_reaction_add(reaction, user):
-    if str(user.id) != str(reaction.message.author.id):
-        await TwinkCoin.serverGiveCoin(1, reaction.message.author.id, client)
-
-@client.event
-async def on_reaction_add(reaction, user):
     await OnReaction.onReactionAdd(reaction, user, client)
 
 @client.event
@@ -115,3 +110,5 @@ async def on_reaction_remove(reaction, user):
 async def on_message(ctx):
     await OnMessage.OnMessage(ctx, client)
     await client.process_commands(ctx)
+
+client.run('NzI3NjQ2NzAzOTEzNjY0NTgy.Xvu3zQ.eK4W__kuVz_LZWvQBKM1bPlHp6A')
